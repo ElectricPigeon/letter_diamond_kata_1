@@ -48,20 +48,22 @@ public class Diamond implements IDiamond, IProcessInput {
     }
 
     public void processStringInput(String input) {
-        Stack<Character>inputStringAlphabet = turnInputStringIntoStack(input);
-        this.setAlphabetStack(inputStringAlphabet);
-        processChar(input.charAt(input.length()-1));
+        this.setAlphabetString(input.toUpperCase());
+        this.buildAlphabetStack(this.alphabetString);
+        processCharForStringInput(input);
     }
 
-    private Stack<Character> turnInputStringIntoStack(String input) {
-        Stack<Character>newAlphabet = new Stack();
+    private void processCharForStringInput(String input) {
+        getStringInputInUseQueueFromSuppliedString(input);
+        ArrayList<String> preparedBody = processDiamond();
+        this.setBody(preparedBody);
+    }
+
+    private void getStringInputInUseQueueFromSuppliedString(String input) {
         input = input.toUpperCase();
-        int index = input.length()-1;
-        while(index >= 0) {
-            newAlphabet.push(input.charAt(index));
-            index--;
+        for(int i=0; i<input.length();i++){
+            inUseQueue.add(input.charAt(i));
         }
-        return newAlphabet;
     }
 
     private void processChar(char c) {
@@ -101,6 +103,16 @@ public class Diamond implements IDiamond, IProcessInput {
     }
 
     private void getInUseQueueFromSuppliedCharacter(char c) {
+        c = Character.toUpperCase(c);
+        Character currentElement = this.getAlphabetStack().pop();
+        this.getInUseQueue().add(currentElement);
+        while (!currentElement.equals(c)){
+            currentElement = this.getAlphabetStack().pop();
+            this.getInUseQueue().add(currentElement);
+        }
+    }
+
+    private void getMinimumLengthInUseQueueFromSuppliedCharacter(char c, int length) {
         c = Character.toUpperCase(c);
         Character currentElement = this.getAlphabetStack().pop();
         this.getInUseQueue().add(currentElement);

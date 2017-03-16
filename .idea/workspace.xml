@@ -19,8 +19,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/katas/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="136">
+              <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -49,8 +49,8 @@
       <file leaf-file-name="Diamond.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/katas/Diamond.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+            <state relative-caret-position="204">
+              <caret line="62" column="36" lean-forward="false" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -575,11 +575,11 @@
     <history-entry file="DiamondTest - 2017.03.16 at 09h 57m 51s.xml">
       <configuration name="DiamondTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DiamondTest_correctlyTreatsStringInput - 2017.03.16 at 09h 03m 29s.xml">
-      <configuration name="DiamondTest.correctlyTreatsStringInput" configurationId="TestNG" />
+    <history-entry file="DiamondTest - 2017.03.16 at 10h 47m 02s.xml">
+      <configuration name="DiamondTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="DiamondTest_correctlyTreatsStringInput - 2017.03.16 at 09h 04m 12s.xml">
-      <configuration name="DiamondTest.correctlyTreatsStringInput" configurationId="TestNG" />
+    <history-entry file="DiamondTest - 2017.03.16 at 10h 58m 33s.xml">
+      <configuration name="DiamondTest" configurationId="TestNG" />
     </history-entry>
     <history-entry file="DiamondTest_correctlyTreatsStringInput - 2017.03.16 at 09h 08m 10s.xml">
       <configuration name="DiamondTest.correctlyTreatsStringInput" configurationId="TestNG" />
@@ -663,13 +663,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/katas/Diamond.java</url>
-          <line>67</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/katas/Diamond.java</url>
-          <line>110</line>
+          <line>112</line>
           <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
@@ -824,16 +818,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/katas/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/katas/Diamond.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+        <state relative-caret-position="204">
+          <caret line="62" column="36" lean-forward="false" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
