@@ -4,16 +4,18 @@ import com.katas.Diamond;
 import java.util.List;
 
 import jdk.nashorn.internal.ir.annotations.Ignore;
+import org.junit.jupiter.api.BeforeAll;
 import org.testng.annotations.Test;
 
 public class DiamondTest {
 
+
     @Test
     public void testForCorrectNumberOfSpaces(){
         char letter = 'B';
-        Diamond diamond = new Diamond();
-        diamond.processInput(String.valueOf(letter));
-        assert diamond.get(1).equals("B   B");
+        Diamond d = new Diamond();
+        d.processInput(String.valueOf(letter));
+        assert d.get(1).equals("B   B");
     }
 
     @Test
@@ -26,28 +28,50 @@ public class DiamondTest {
 
     @Test
     public void testGivenLevelHasLettersAtAppropriateIndices(){
-        Diamond testDiamond = new Diamond();
-        testDiamond.processInput("D");
-        String lineB = testDiamond.get(1);
+        Diamond d = new Diamond();
+        d.processInput("D");
+        String lineB = d.get(1);
         assert lineB.equals("  B B  ");
     }
 
     @Test
     public void testCorrectLettersForGivenString(){
-        //tbd
+        Diamond d = new Diamond();
+        d.processInput("D");
+        String lineA = d.get(0);
+        String lineB = d.get(1);
+        String lineC = d.get(2);
+        String lineD = d.get(3);
+        assert lineA.equals("   A   ");
+        assert lineB.equals("  B B  ");
+        assert lineC.equals(" C   C ");
+        assert lineD.equals("D     D");
     }
 
-    @Ignore
     @Test
-    public void testDiamondCorrectlyReverses(){
-        Diamond result = new Diamond();
-        result.processInput("argh");
-        List<String> resultBody = result.getBody();
+    public void testLowercaseCharacterAccepted() {
+        Diamond d = new Diamond();
+        d.processInput("d");
+        String lineA = d.get(0);
+        String lineB = d.get(1);
+        String lineC = d.get(2);
+        String lineD = d.get(3);
+        assert lineA.equals("   A   ");
+        assert lineB.equals("  B B  ");
+        assert lineC.equals(" C   C ");
+        assert lineD.equals("D     D");
+    }
+
+    @Test
+    public void correctlyTreatsStringInput(){
+        Diamond d = new Diamond();
+        d.processInput("argh");
+        List<String> resultBody = d.getBody();
         for (String line: resultBody){
             int divider = line.length()/2;
             String firstHalf = line.substring(0, divider);
             String secondHalf = line.substring(divider + 1); //get past the middle thing
-            String firstHalfReversed = result.reverse(firstHalf);
+            String firstHalfReversed = d.reverseString(firstHalf);
             assert secondHalf.equals(firstHalfReversed);
         }
     }
